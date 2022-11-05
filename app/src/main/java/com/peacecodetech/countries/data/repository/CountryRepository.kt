@@ -6,7 +6,8 @@ import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import com.peacecodetech.countries.network.CountryApiService
 import com.peacecodetech.countries.data.source.CountryPagingSource
-import com.peacecodetech.countries.model.Countries
+import com.peacecodetech.countries.model.Info
+import com.peacecodetech.countries.network.CountryApiResponse
 import com.peacecodetech.countries.utils.NETWORK_PAGE_SIZE
 import kotlinx.coroutines.flow.Flow
 
@@ -17,7 +18,7 @@ import kotlinx.coroutines.flow.Flow
 
 class CountryRepository(private val service: CountryApiService) {
 
-    fun getCountries(): Flow<PagingData<Countries>> {
+    fun getCountries(): Flow<PagingData<Info>> {
         return Pager(
             config = PagingConfig(
                 pageSize = NETWORK_PAGE_SIZE,

@@ -1,6 +1,7 @@
 package com.peacecodetech.countries.ui
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -69,7 +70,9 @@ class HomeFragment : Fragment() {
                 .flowWithLifecycle(lifecycle, Lifecycle.State.STARTED)
                 .collect { data ->
                     if (data != null) {
+
                         countryAdapter.submitData(data)
+                        Log.d("HomeFragment","${countryAdapter.submitData(data)}")
                     }
                 }
         }

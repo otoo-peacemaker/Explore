@@ -13,8 +13,8 @@ import java.util.concurrent.TimeUnit
 
 interface CountryApiService {
 
-    @GET("character")
-    suspend fun getAllCountries(): CountryApiResponse
+    @GET("all")
+    suspend fun getAllCountries():CountryApiResponse
 }
 
 fun createApiService(): CountryApiService {
