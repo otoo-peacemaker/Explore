@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="primaryColor">#FF6C00</color>
+    <color name="colorOnPrimary">#FDFDFC</color>
+    <color name="secondaryColor">#2879FF</color>
+    <color name="colorVariant">#000F24</color>
+    <color name="windowBackground">#000F24</color>
+    <color name="textColor">#EAECF0</color>
+
+
+    <color name="black">#FF000000</color>
+    <color name="white">#F2F4F7</color>
+    <color name="countryTextColor">#1C1917</color>
+    <color name="searchBarTextColor">#EAECF0</color>
+
+    <color name="checkboxNormalColor">#D0D5DD</color>
+    <color name="checkboxActivatedColor">#F2F4F7</color>
+
+</resources>
