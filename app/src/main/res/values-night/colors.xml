@@ -16,5 +16,5 @@
 
     <color name="checkboxNormalColor">#D0D5DD</color>
     <color name="checkboxActivatedColor">#F2F4F7</color>
-
+    <color name="titleTextColor">#EAECF0</color>
 </resources>
