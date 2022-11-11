@@ -3,8 +3,12 @@
 
 A description of the app and its features.
 -------------------------------------------
+A responsive mobile app with 2 screens, which get get a list of all countries using this [Rest API](https://restcountries.com/v3.1/all) and display the countries in a List. 
 
+When a user taps on any of the countries in the list, it navigates the user to the details screen and show the details of the country
 
+## features
+- light and dark mode
 
 A description of the code base and how it works.
 -------------------------------------------------
