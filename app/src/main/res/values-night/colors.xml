@@ -11,10 +11,12 @@
 
     <color name="black">#FF000000</color>
     <color name="white">#F2F4F7</color>
-    <color name="countryTextColor">#1C1917</color>
+    <color name="countryTextColor">#F2F4F7</color>
     <color name="searchBarTextColor">#EAECF0</color>
 
     <color name="checkboxNormalColor">#D0D5DD</color>
     <color name="checkboxActivatedColor">#F2F4F7</color>
     <color name="titleTextColor">#EAECF0</color>
+
+    <color name="cityTextColor">#98A2B3</color>
 </resources>
