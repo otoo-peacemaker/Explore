@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="24dp"
+    tools:context=".DetailsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!--population-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/detailTextAppearance1"
+                android:text="@string/population" />
+
+            <TextView
+                android:id="@+id/population"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_45345" />
+        </LinearLayout>
+
+
+        <!--region-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/detailTextAppearance1"
+                android:text="@string/region" />
+
+            <TextView
+                android:id="@+id/region"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/europe" />
+        </LinearLayout>
+
+
+        <!--capital-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/detailTextAppearance1"
+                android:text="@string/capital" />
+
+            <TextView
+                android:id="@+id/capital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/andora_la_vella" />
+        </LinearLayout>
+
+
+        <!--motto-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/detailTextAppearance1"
+                android:text="@string/motto" />
+
+            <TextView
+                android:id="@+id/motto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/virtus_unita_fortior" />
+        </LinearLayout>
+
+
+        <!--language-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/detailTextAppearance1"
+                android:text="@string/official_language" />
+
+            <TextView
+                android:id="@+id/language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/catalan" />
+        </LinearLayout>
+
+
+        <!--ethnic group-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/detailTextAppearance1"
+                android:text="@string/ethic_group" />
+
+            <TextView
+                android:id="@+id/ethGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/andorran_spanish_portuguese" />
+        </LinearLayout>
+
+
+        <!--religion-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/detailTextAppearance1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/religion" />
+
+            <TextView
+                android:id="@+id/religion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/christianity" />
+        </LinearLayout>
+
+
+        <!--Govt-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/detailTextAppearance1"
+                android:text="@string/government" />
+
+            <TextView
+                android:id="@+id/govt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/parliamentary_democracy" />
+        </LinearLayout>
+
+
+        <!--Independence-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/detailTextAppearance1"
+                android:text="@string/independence" />
+
+            <TextView
+                android:id="@+id/independence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_8th_september_1278" />
+        </LinearLayout>
+
+
+        <!--Area-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/detailTextAppearance1"
+                android:text="@string/area" />
+
+            <TextView
+                android:id="@+id/area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_467_63_km2" />
+        </LinearLayout>
+
+
+        <!--Currency-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/detailTextAppearance1"
+                android:text="@string/currency" />
+
+            <TextView
+                android:id="@+id/currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/euro" />
+        </LinearLayout>
+
+        <!--GDP-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                style="@style/detailTextAppearance1"
+                android:layout_height="wrap_content"
+                android:text="@string/gdp" />
+
+            <TextView
+                android:id="@+id/gdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/us_3_400_billion" />
+        </LinearLayout>
+
+
+        <!--Time zone-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/detailTextAppearance1"
+                android:text="@string/time_zone" />
+            <TextView
+                android:id="@+id/tMZone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tutc_01" />
+        </LinearLayout>
+
+
+        <!--Date format-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/detailTextAppearance1"
+                android:text="@string/date_format" />
+            <TextView
+                android:id="@+id/dateFormat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dd_mm_yyyy" />
+        </LinearLayout>
+
+        <!--Dialling code-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                style="@style/detailTextAppearance1"
+                android:layout_height="wrap_content"
+                android:text="@string/dialling_code" />
+            <TextView
+                android:id="@+id/dCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_376" />
+        </LinearLayout>
+
+        <!--Driving side-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                style="@style/detailTextAppearance1"
+                android:layout_height="wrap_content"
+                android:text="@string/driving_side" />
+            <TextView
+                android:id="@+id/dSide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/right" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
