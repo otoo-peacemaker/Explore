@@ -1,4 +1,4 @@
-package com.peacecodetech.countries.api
+package com.peacecodetech.countries.network
 
 import com.peacecodetech.countries.utils.API_CONNECT_TIMEOUT
 import com.peacecodetech.countries.utils.API_READ_TIMEOUT

@@ -1,4 +1,4 @@
-package com.gads.rickmortygadsapp.viewmodel
+package com.peacecodetech.countries.viewmodel
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,10 +6,10 @@ import androidx.core.view.isVisible
 import androidx.paging.LoadState
 import androidx.paging.LoadStateAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.gads.rickmortygadsapp.databinding.ItemLoadingStateBinding
+import com.peacecodetech.countries.databinding.ItemLoadingStateBinding
 
-class CharacterLoadingAdapter(private val retry: () -> Unit) :
-    LoadStateAdapter<CharacterLoadingAdapter.LoadingStateViewHolder>() {
+class CountryLoadingAdapter(private val retry: () -> Unit) :
+    LoadStateAdapter<CountryLoadingAdapter.LoadingStateViewHolder>() {
 
     class LoadingStateViewHolder(private val binding: ItemLoadingStateBinding, retry: () -> Unit) :
         RecyclerView.ViewHolder(binding.root) {

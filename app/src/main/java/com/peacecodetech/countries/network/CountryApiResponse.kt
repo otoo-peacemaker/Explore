@@ -1,6 +1,6 @@
 
 
-package com.peacecodetech.countries.api
+package com.peacecodetech.countries.network
 
 import com.peacecodetech.countries.model.Countries
 import com.peacecodetech.countries.model.Info

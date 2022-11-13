@@ -3,9 +3,9 @@ package com.peacecodetech.countries.data.source
 import android.net.Uri
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.peacecodetech.countries.api.CountryApiService
+import com.peacecodetech.countries.network.CountryApiService
 import com.peacecodetech.countries.model.Countries
-import com.peacecodetech.countries.api.CountryApiResponse
+import com.peacecodetech.countries.network.CountryApiResponse
 import com.peacecodetech.countries.model.Info
 import com.peacecodetech.countries.utils.STARTING_PAGE
 

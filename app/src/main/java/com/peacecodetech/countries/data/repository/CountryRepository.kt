@@ -4,7 +4,7 @@ package com.peacecodetech.countries.data.repository
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
-import com.peacecodetech.countries.api.CountryApiService
+import com.peacecodetech.countries.network.CountryApiService
 import com.peacecodetech.countries.data.source.CountryPagingSource
 import com.peacecodetech.countries.model.Countries
 import com.peacecodetech.countries.utils.NETWORK_PAGE_SIZE
