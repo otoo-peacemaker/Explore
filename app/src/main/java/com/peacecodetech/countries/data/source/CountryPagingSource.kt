@@ -29,10 +29,10 @@ class CountryPagingSource(
             val info: Info = response.info
             val next: String? = Uri.parse(info.next).getQueryParameter("page")
 
-            val characters: List<Countries> = response.results
+            val countries: List<Countries> = response.results
 
             LoadResult.Page(
-                data = characters,
+                data = countries,
                 prevKey = if (position == STARTING_PAGE) null else position!! - 1,
                 nextKey = next?.toInt()
             )

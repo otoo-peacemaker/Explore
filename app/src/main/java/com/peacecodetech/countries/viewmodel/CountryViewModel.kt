@@ -14,7 +14,7 @@ class CountryViewModel(private val repository: CountryRepository) : ViewModel() 
 
     private val mutableCharacterData: MutableStateFlow<PagingData<Countries>?> =
         MutableStateFlow(null)
-    val characterData = mutableCharacterData.asStateFlow()
+    val countryData = mutableCharacterData.asStateFlow()
 
     fun getCountries() {
         viewModelScope.launch {
