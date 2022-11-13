@@ -6,9 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="24dp"
-    tools:context=".DetailsFragment">
+    tools:context=".ui.DetailsFragment">
 
-    <LinearLayout
+  <!--  <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <!--population-->
+        &lt;!&ndash;population&ndash;&gt;
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
         </LinearLayout>
 
 
-        <!--region-->
+        &lt;!&ndash;region&ndash;&gt;
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -56,7 +56,7 @@
         </LinearLayout>
 
 
-        <!--capital-->
+        &lt;!&ndash;capital&ndash;&gt;
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -76,7 +76,7 @@
         </LinearLayout>
 
 
-        <!--motto-->
+        &lt;!&ndash;motto&ndash;&gt;
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -97,7 +97,7 @@
         </LinearLayout>
 
 
-        <!--language-->
+        &lt;!&ndash;language&ndash;&gt;
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -117,7 +117,7 @@
         </LinearLayout>
 
 
-        <!--ethnic group-->
+        &lt;!&ndash;ethnic group&ndash;&gt;
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -137,7 +137,7 @@
         </LinearLayout>
 
 
-        <!--religion-->
+        &lt;!&ndash;religion&ndash;&gt;
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -157,7 +157,7 @@
         </LinearLayout>
 
 
-        <!--Govt-->
+        &lt;!&ndash;Govt&ndash;&gt;
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -178,7 +178,7 @@
         </LinearLayout>
 
 
-        <!--Independence-->
+        &lt;!&ndash;Independence&ndash;&gt;
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -198,7 +198,7 @@
         </LinearLayout>
 
 
-        <!--Area-->
+        &lt;!&ndash;Area&ndash;&gt;
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -218,7 +218,7 @@
         </LinearLayout>
 
 
-        <!--Currency-->
+        &lt;!&ndash;Currency&ndash;&gt;
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -237,7 +237,7 @@
                 android:text="@string/euro" />
         </LinearLayout>
 
-        <!--GDP-->
+        &lt;!&ndash;GDP&ndash;&gt;
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -258,7 +258,7 @@
         </LinearLayout>
 
 
-        <!--Time zone-->
+        &lt;!&ndash;Time zone&ndash;&gt;
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -276,7 +276,7 @@
         </LinearLayout>
 
 
-        <!--Date format-->
+        &lt;!&ndash;Date format&ndash;&gt;
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -293,7 +293,7 @@
                 android:text="@string/dd_mm_yyyy" />
         </LinearLayout>
 
-        <!--Dialling code-->
+        &lt;!&ndash;Dialling code&ndash;&gt;
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -310,7 +310,7 @@
                 android:text="@string/_376" />
         </LinearLayout>
 
-        <!--Driving side-->
+        &lt;!&ndash;Driving side&ndash;&gt;
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -328,5 +328,14 @@
                 android:text="@string/right" />
         </LinearLayout>
 
-    </LinearLayout>
+    </LinearLayout>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:itemCount="10"
+        tools:listitem="@layout/detail_list_items" />
 </androidx.constraintlayout.widget.ConstraintLayout>

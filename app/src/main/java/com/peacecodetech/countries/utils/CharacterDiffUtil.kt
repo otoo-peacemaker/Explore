@@ -1,14 +1,14 @@
 package com.peacecodetech.countries.utils
 
 import androidx.recyclerview.widget.DiffUtil
-import com.peacecodetech.countries.data.response.CountryDetails
+import com.peacecodetech.countries.model.Countries
 
-object CharacterDiffUtil : DiffUtil.ItemCallback<CountryDetails>() {
-    override fun areItemsTheSame(oldItem: CountryDetails, newItem: CountryDetails): Boolean {
+object CharacterDiffUtil : DiffUtil.ItemCallback<Countries>() {
+    override fun areItemsTheSame(oldItem: Countries, newItem: Countries): Boolean {
         return oldItem == newItem
     }
 
-    override fun areContentsTheSame(oldItem: CountryDetails, newItem: CountryDetails): Boolean {
+    override fun areContentsTheSame(oldItem: Countries, newItem: Countries): Boolean {
         return oldItem.id == newItem.id
     }
 }

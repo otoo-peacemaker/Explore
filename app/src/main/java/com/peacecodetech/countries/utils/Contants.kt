@@ -1,4 +1,4 @@
-package com.gads.rickmortygadsapp.utils
+package com.peacecodetech.countries.utils
 
 const val BASE_URL = "https://rickandmortyapi.com/api/"
 const val API_CONNECT_TIMEOUT = 300L

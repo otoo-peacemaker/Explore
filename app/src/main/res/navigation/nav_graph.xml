@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.peacecodetech.countries.HomeFragment"
+        android:name="com.peacecodetech.countries.ui.HomeFragment"
         tools:layout="@layout/fragment_home">
 
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.peacecodetech.countries.DetailsFragment"
+        android:name="com.peacecodetech.countries.ui.DetailsFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_details">
 

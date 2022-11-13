@@ -1,29 +1,26 @@
-package com.gads.rickmortygadsapp.viewmodel
+package com.peacecodetech.countries.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
-import com.gads.rickmortygadsapp.data.model.Character
-import com.gads.rickmortygadsapp.repo.CharacterRepository
+import com.peacecodetech.countries.data.repository.CountryRepository
+import com.peacecodetech.countries.model.Countries
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
-class CharacterViewModel(
-    private val repository: CharacterRepository
-) : ViewModel() {
+class CountryViewModel(private val repository: CountryRepository) : ViewModel() {
 
-    private val mutableCharacterData: MutableStateFlow<PagingData<Character>?> =
+    private val mutableCharacterData: MutableStateFlow<PagingData<Countries>?> =
         MutableStateFlow(null)
     val characterData = mutableCharacterData.asStateFlow()
 
-    fun getCharacters() {
+    fun getCountries() {
         viewModelScope.launch {
-            repository.getCharacters()
+            repository.getCountries()
                 .cachedIn(viewModelScope)
-                .collect {data ->
+                .collect { data ->
                     mutableCharacterData.value = data
                 }
         }

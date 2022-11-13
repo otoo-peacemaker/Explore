@@ -1,3 +1,8 @@
 package com.peacecodetech.countries.model
 
-data class Info()
+data class Info(
+    val count: Int,
+    val next: String?,
+    val pages: Int,
+    val prev: String?
+)

@@ -1,61 +1,44 @@
-/*
- * Copyright (C) 2018 The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+package com.peacecodetech.countries.api
 
-package com.example.android.codelabs.paging.api
-
+import com.peacecodetech.countries.utils.API_CONNECT_TIMEOUT
+import com.peacecodetech.countries.utils.API_READ_TIMEOUT
+import com.peacecodetech.countries.utils.BASE_URL
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import okhttp3.logging.HttpLoggingInterceptor.Level
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
-import retrofit2.http.Query
+import java.util.concurrent.TimeUnit
 
-const val IN_QUALIFIER = "in:name,description"
 
-/**
- * Github API communication setup via Retrofit.
- */
-interface GithubService {
-    /**
-     * Get repos ordered by stars.
-     */
-    @GET("search/repositories?sort=stars")
-    suspend fun searchRepos(
-        @Query("q") query: String,
-        @Query("page") page: Int,
-        @Query("per_page") itemsPerPage: Int
-    ): RepoSearchResponse
+interface CountryApiService {
 
-    companion object {
-        private const val BASE_URL = "https://api.github.com/"
+    @GET("character")
+    suspend fun getAllCountries(): CountryApiResponse
+}
 
-        fun create(): GithubService {
-            val logger = HttpLoggingInterceptor()
-            logger.level = Level.BASIC
+fun createApiService(): CountryApiService {
+    val retrofit: Retrofit = Retrofit.Builder()
+        .baseUrl(BASE_URL)
+        .client(createHttpClient())
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
 
-            val client = OkHttpClient.Builder()
-                .addInterceptor(logger)
-                .build()
-            return Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .client(client)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build()
-                .create(GithubService::class.java)
-        }
+    return retrofit.create(CountryApiService::class.java)
+}
+
+private fun createHttpClient(): OkHttpClient {
+    val interceptor = createLoggingInterceptor()
+    return OkHttpClient.Builder()
+        .addInterceptor(interceptor)
+        .connectTimeout(API_CONNECT_TIMEOUT, TimeUnit.SECONDS)
+        .readTimeout(API_READ_TIMEOUT, TimeUnit.SECONDS)
+        .build()
+}
+
+private fun createLoggingInterceptor(): HttpLoggingInterceptor {
+    val interceptor = HttpLoggingInterceptor().apply {
+        level = HttpLoggingInterceptor.Level.BODY
     }
+    return interceptor
 }

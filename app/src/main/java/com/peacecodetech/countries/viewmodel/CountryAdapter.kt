@@ -1,32 +1,33 @@
-package com.gads.rickmortygadsapp.viewmodel
+package com.peacecodetech.countries.viewmodel
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.gads.rickmortygadsapp.data.model.Character
-import com.gads.rickmortygadsapp.databinding.ItemCharacterBinding
-import com.gads.rickmortygadsapp.utils.CharacterDiffUtil
+import com.peacecodetech.countries.databinding.CountryListBinding
+import com.peacecodetech.countries.model.Countries
+import com.peacecodetech.countries.utils.CharacterDiffUtil
 
-class CharacterAdapter :
-    PagingDataAdapter<Character, CharacterAdapter.CharacterViewHolder>(CharacterDiffUtil) {
+class CountryAdapter :
+    PagingDataAdapter<Countries, CountryAdapter.CharacterViewHolder>(CharacterDiffUtil) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CharacterViewHolder {
-        val binding = ItemCharacterBinding.inflate(LayoutInflater.from(parent.context))
+        val binding = CountryListBinding.inflate(LayoutInflater.from(parent.context))
         return CharacterViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: CharacterViewHolder, position: Int) {
-        val character: Character? = getItem(position)
+        val character: Countries? = getItem(position)
         if (character != null) {
             holder.bind(character)
         }
     }
 
-    class CharacterViewHolder(private val binding: ItemCharacterBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(character: Character) {
-            binding.tvName.text = character.name
-            binding.tvOrigin.text = character.origin.name
+    class CharacterViewHolder(private val binding: CountryListBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(countries: Countries) {
+            binding.country.text = countries.name
+            binding.city.text = countries.name
         }
     }
 }

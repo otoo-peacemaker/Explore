@@ -1,16 +1,16 @@
-package com.gads.rickmortygadsapp.viewmodel
+package com.peacecodetech.countries.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.gads.rickmortygadsapp.repo.CharacterRepository
+import com.peacecodetech.countries.data.repository.CountryRepository
 
 @Suppress("UNCHECKED_CAST")
-class CharacterViewModelFactory(private val repository: CharacterRepository)
-    : ViewModelProvider.Factory {
+class CountryViewModelFactory(private val repository: CountryRepository) :
+    ViewModelProvider.Factory {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        if (modelClass.isAssignableFrom(CharacterViewModel::class.java)) {
-            return CharacterViewModel(repository) as T
+        if (modelClass.isAssignableFrom(CountryViewModel::class.java)) {
+            return CountryViewModel(repository) as T
         } else {
             throw IllegalArgumentException("Unknown ViewModel class: ${modelClass.name}")
         }

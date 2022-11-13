@@ -1,41 +1,43 @@
 package com.peacecodetech.countries.data.source
 
+import android.net.Uri
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.example.android.codelabs.paging.api.CountryApiService
-import com.peacecodetech.countries.api.CountrySearchResponse
+import com.peacecodetech.countries.api.CountryApiService
+import com.peacecodetech.countries.model.Countries
+import com.peacecodetech.countries.api.CountryApiResponse
+import com.peacecodetech.countries.model.Info
 import com.peacecodetech.countries.utils.STARTING_PAGE
 
 // GitHub page API is 1 based: https://developer.github.com/v3/#pagination
-const val GITHUB_STARTING_PAGE_INDEX = 1
 
-class RickMortyDataSource(
+class CountryPagingSource(
     private val apiService: CountryApiService
-) : PagingSource<Int, Character>() {
+) : PagingSource<Int, Countries>() {
 
     override val keyReuseSupported: Boolean = true
 
-    override fun getRefreshKey(state: PagingState<Int, Character>): Int? {
+    override fun getRefreshKey(state: PagingState<Int, Countries>): Int? {
         return state.anchorPosition
     }
 
-    override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Character> {
+    override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Countries> {
         val position = if (params.key == null) STARTING_PAGE else params.key
 
-        try {
-            val response: CountrySearchResponse = apiService.getAllCharacters()
+        return try {
+            val response: CountryApiResponse = apiService.getAllCountries()
             val info: Info = response.info
             val next: String? = Uri.parse(info.next).getQueryParameter("page")
 
-            val characters: List<Character> = response.results
+            val characters: List<Countries> = response.results
 
-            return LoadResult.Page(
+            LoadResult.Page(
                 data = characters,
                 prevKey = if (position == STARTING_PAGE) null else position!! - 1,
                 nextKey = next?.toInt()
             )
         } catch (e: Exception) {
-            return LoadResult.Error(e)
+            LoadResult.Error(e)
         }
     }
 }

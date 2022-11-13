@@ -14,9 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.codelabs.paging.model
-
-import com.google.gson.annotations.SerializedName
+package com.peacecodetech.countries.model
 
 /**
  * Immutable model class for a Github repo that holds all the information about a repository.
@@ -24,13 +22,13 @@ import com.google.gson.annotations.SerializedName
  * with the serialized name.
  * This class also defines the Room repos table, where the repo [id] is the primary key.
  */
-data class Repo(
-    @field:SerializedName("id") val id: Long,
-    @field:SerializedName("name") val name: String,
-    @field:SerializedName("full_name") val fullName: String,
-    @field:SerializedName("description") val description: String?,
-    @field:SerializedName("html_url") val url: String,
-    @field:SerializedName("stargazers_count") val stars: Int,
-    @field:SerializedName("forks_count") val forks: Int,
-    @field:SerializedName("language") val language: String?
+data class Countries(
+    val id: Long,
+    val name: String,
+    val fullName: String,
+    val description: String?,
+    val url: String,
+    val stars: Int,
+    val forks: Int,
+    val language: String?
 )
